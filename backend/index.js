@@ -7,7 +7,9 @@ const app = express();
 dotenv.config();
 
 // middlewares
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:3000', 'http://localhost:5173/'] // Add your front-end domain here
+  }));
 app.use(express.json());
 
 
