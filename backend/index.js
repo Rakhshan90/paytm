@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/api/v1', rootRouter);
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, function(){
     console.log(`server listening on ${PORT}`);
 });
