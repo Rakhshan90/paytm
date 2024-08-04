@@ -14,6 +14,10 @@ app.use(express.json());
 // routes
 app.use('/api/v1', rootRouter);
 
+app.get('/', (req, res)=>{
+    res.status(200).send("Deployed");
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function(){
