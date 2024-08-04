@@ -8,8 +8,11 @@ dotenv.config();
 
 // middlewares
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:5173/'] // Add your front-end domain here
+    origin: ['http://localhost:5173'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   }));
+
 app.use(express.json());
 
 
